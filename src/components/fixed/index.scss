@@ -1,0 +1,9 @@
+.fixed {
+  position: fixed;
+  right: 10PX;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 1px solid #CCC;
+  width: 200px;
+  height: 200px;
+}

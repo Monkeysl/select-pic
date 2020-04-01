@@ -25,6 +25,8 @@ export default (props) => {
     })
     onChange(Object.keys(_arr))
     setLen(_arr.length)
+    if(_arr.length===pictures.length) {setBool(true); return}
+    setBool(false)
   }
   const clickHandle = (idData,idxs) => {
     if(idData) {

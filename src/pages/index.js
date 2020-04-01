@@ -1,9 +1,10 @@
-import React from 'react';
+import React from 'react'
 import PictureSelect from '../components/PictureSelect/'
+import Fixed from '../components/fixed/'
 
 const Page = () => {
   const [value, setValue] = React.useState([]);
-  const pictures = [
+  const [pictures, setPictures] = React.useState([
     {
       id: '1',
       name: 'foo',
@@ -19,11 +20,16 @@ const Page = () => {
       name: 'foo',
       url: 'https://gw.alipayobjects.com/mdn/rms_d212b7/afts/img/A*LlfeSa8N0WgAAAAAAAAAAABkARQnAQ'
     },
-  ];
+  ]);
   
   // console.log(value); // 输出用户选择图片 id。
   
-  return <PictureSelect pictures={pictures} value={value} onChange={(value) => setValue(value)} />
+  return (
+    <>
+      <PictureSelect pictures={pictures} value={value} onChange={(value) => setValue(value)} />
+      <Fixed pictures={pictures} setPictures={setPictures} />
+    </>
+    )
 };
 
 export default Page;
